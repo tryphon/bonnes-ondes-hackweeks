@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  {% include 'hackweeks/head' %}
+	<title>EPPLUG - {{show.name}}</title>
+	<meta name="Description" content="{{show.description}}"/>
+	<meta name="Keywords" content="{{show.tags}}"/>
+</head>
+<body class="show">
+  {% include 'hackweeks/header' %}
+
+	<div id="breadcrumb">
+		/ <a href="http://hackweeks.epplug.org/fr-fr">HackWeeks</a> / 
+    <a href="{{show.url_for}}">RADIO</a>
+	</div>
+	<div id="main">
+		<h3>{{show.name}}</h3>
+    {{show.description}}
+    
+    <hr/>
+    
+    {% for episode in show.episodes reversed %}
+    <h4>{{episode.title}}</h4>
+    <div class="episode">
+      {{episode.image.tag_for_thumb}}
+      <p class="broadcasted_at">
+        {{episode.broadcasted_at | prettydate }}
+      </p>
+      <p>
+        {{ episode.description|textilize|strip_tags|truncate:400 }}
+      </p>
+      <a href="{{episode.url_for}}">Ecouter : {{episode.title}}</a>
+    </div>
+    {% endfor %}
+	</div>
+  {% include 'hackweeks/footer' %}
+  </body>
+</html>

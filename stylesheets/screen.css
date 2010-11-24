@@ -1,0 +1,38 @@
+/* @import 'reset.css'; */
+
+/* ::::: http://hackweeks.epplug.org/static/base.css ::::: */
+
+body { font-family: Tahoma,Geneva,Kalimati,sans-serif; background: url('../images/footer_full.gif') no-repeat scroll center bottom rgb(238, 233, 227); padding: 0pt; margin: 0pt; }
+p { text-align: justify; }
+img { border: medium none; margin: 0pt; }
+a { color: rgb(176, 48, 1); text-decoration: none; }
+li { list-style: none outside none; background: url('../images/bullet.gif') no-repeat scroll 0px 7px transparent; padding: 0px 15px; }
+h3 { font-size: 20pt; text-transform: uppercase; }
+h4 { font-size: 14pt; text-transform: uppercase; }
+#banner { position: absolute; top: 0pt; left: 0pt; width: 100%; height: 400px; background: url('../images/banner_full.gif') no-repeat scroll center top transparent; }
+#content { position: relative; width: 965px; height: 100%; margin: 0pt auto; }
+#hat { width: 800px; height: 394px; vertical-align: bottom; color: rgb(238, 234, 226); }
+#hat_title { position: absolute; width: 800px; top: 228px; font-size: 50px; text-align: right; -moz-transform: rotate(-9deg); -webkit-transform: rotate(-9deg); color: rgb(150, 40, 2); }
+#hat_header { position: absolute; top: 320px; width: 760px; left: 20px; font-size: 180%; color: rgb(238, 234, 226); }
+#main { width: 750px; background-color: rgb(225, 218, 202); padding: 25px; }
+#breadcrumb { position: absolute; top: 410px; left: 25px; font-size: 0.6em; font-weight: bold; }
+#partners { position: absolute; top: 430px; right: 0px; width: 130px; font-size: 0.6em; font-weight: bold; text-align: center; background-color: white; border: 1px solid rgb(176, 48, 1); padding-top: 5px; }
+#partners > div { margin: 15px; }
+#langswitch { position: absolute; top: 405px; right: 185px; }
+#langswitch > a > img { width: 24px; height: 15px; margin: 5px; }
+#menu { position: absolute; top: 260px; right: 0px; width: 175px; }
+#menu > ul > li { white-space: nowrap; list-style: none outside none; background: none repeat scroll 0% 0% transparent; padding: 0pt; }
+#menu > ul > li > a { text-decoration: none; color: black; }
+#menu > ul > li > span { display: none; }
+#footer { width: 800px; padding: 0px 149px 0px 0px; height: 289px; margin: 0pt auto; font-size: 60%; }
+
+body.show .episode img { float: right; margin-left: 15px }
+body.episode .headline { float: right; margin-left: 15px; margin-bottom: 7px; min-height: 13em; }
+body.episode .headline h4 { margin: 0 0 5px 0 }
+body.episode .headline .audio .name { margin: 0 0 0.2em 0; }
+body.episode .headline .audio .duration { margin: 0; font-size: 0.8em; }
+body.episode .headline .audio { margin-bottom: 1em; }
+body.episode .headline .audio audio { width: 200px; height: 30px; }
+body.episode .headline .image { text-align: center }
+.episode .broadcasted_at { font-size: 0.8em; font-style: italic; margin-top: 0 }
+body.show h4, body.episode h3 { margin-bottom: 0 }

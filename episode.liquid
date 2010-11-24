@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  {% include 'hackweeks/head' %}
+	<title>EPPLUG - {{episode.title}} - {{ show.name }}</title>
+	<meta name="Description" content="{{|textilize|strip_tags|truncate:120}}"/>
+	<meta name="Keywords" content="{{show.tags}} {{episode.tags}}"/>
+</head>
+<body class="episode">
+  {% include 'hackweeks/header' %}
+
+	<div id="breadcrumb">
+		/ <a href="http://hackweeks.epplug.org/fr-fr">HackWeeks</a> / 
+    <a href="{{show.url_for}}">RADIO</a> / 
+    <a href="{{episode.url_for}}">{{episode.title}}</a>
+	</div>
+	<div id="main">
+		<h3>{{episode.title}}</h3>
+    <div class="episode">
+      <div class="headline">
+ 	      <h4>Ecoutez</h4>
+        {% if episode.broadcasted_at > now or episode.contents == empty %}
+        Retrouvez nous <br/>{{episode.broadcasted_at | prettydate }}
+        {% else %}
+     	    {% for content in episode.contents %}
+	        <div class="audio" id="audio-{{forloop.index}}">
+            {% if forloop.length > 1 %}
+            <p class="name">{{content.name}}</p>
+            {% endif %}
+            <audio controls="controls" preload="metadata">
+              <source src="{{content.url_for_mp3}}" type="audio/mpeg"/>
+              <source src="{{content.url_for_ogg}}" type="audio/ogg; codecs=vorbis"/>
+              <a href="{{content.url_for_playlist}}">Avec votre lecteur préféré</a>
+            </audio>
+	          {% if content.duration %}
+            <p class="duration">Durée: {{content.duration}} minutes</p>
+            {% endif %}
+	        </div>
+	        {% endfor %}
+	      {% endif %}
+        <div class="image">
+          {{episode.image.tag}}
+        </div>
+      </div>
+      <p class="broadcasted_at">
+        {{episode.broadcasted_at | prettydate }}
+      </p>
+      <p>
+        {{ episode.description|textilize }}
+      </p>
+    </div>
+	</div>
+  {% include 'hackweeks/footer' %}
+  </body>
+</html>
