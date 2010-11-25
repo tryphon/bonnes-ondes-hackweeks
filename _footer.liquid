@@ -1,3 +1,27 @@
+<div id="podcast">
+  <h4>Abonnez vous au podcast</h4>
+
+  <p>
+    Pour ne rien manquer de {{show.name}}, il suffit de vous abonner au podcast :
+  </p>
+        
+  <a href="{{show.url_for_podcast}}">
+    <img class="podcast" src="{{theme.url_for_assets}}/images/podcast.png"/>
+  </a>
+  
+  <div class="links">
+    <p>
+      Adresse du podcast : <input class="podcast" size="{{show.url_for_podcast | size}}" value="{{show.url_for_podcast}}" type="text" readonly="true"/> {{show.clippy_for_podcast}}
+    </p>
+  
+    <p>
+      <a href="{{show.url_for_podcast}}" title="Voir le feed RSS">RSS</a> | 
+      <a href="{{show.itpc_url_for_podcast}}" title="Ajouter ce podcast dans votre iTunes">iTunes</a> | 
+      <a href="http://wiki.tryphon.org/comment_lire_un_podcast" title="Comment lire un podcast ?">Aide</a>
+    </p>
+  </div>
+</div>
+
 </div>
 <div id="footer">
 	<br/>
@@ -7,3 +31,5 @@
 	Parution au Journal Officiel le 21/06/03 sous le n° 20030025 ­ Siren : 494 525 280<br/>
 	contact email : bureau (AT) epplug.org<br/>
 </div>
+<script src="{{theme.url_for_assets}}/javascripts/prototype.min.js" type="text/javascript"></script>
+<script src="{{theme.url_for_assets}}/javascripts/effects.min.js" type="text/javascript"></script>
