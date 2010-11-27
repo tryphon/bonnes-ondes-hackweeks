@@ -19,21 +19,6 @@
     
     <hr/>
 
-    <h4>Ecoutez en direct</h4>
-
-    <p>
-      Radio H@ackWeeks est en direct de vendredi 18h à 19h, samedi à patir de 9h30.
-    </p>
-
-    <p>
-      <audio controls="controls" style="width: 300px;">
-        <source src="http://stream.tryphon.org:8000/live.mp3"/>
-        <source src="http://stream.tryphon.org:8000/live.ogg"/>
-      </audio>
-      <br/>
-      ou en <a href="http://stream.tryphon.org:8000/live.mp3.m3u"/>MP3</a> et en <a href="http://stream.tryphon.org:8000/live.ogg.m3u"/>Ogg</a>
-    </p>
-    
     {% for episode in show.episodes %}
     <h4>{{episode.title}}</h4>
     <div class="episode">
