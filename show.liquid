@@ -1,18 +1,19 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  {% include 'hackweeks/head' %}
+  {% include 'head' %}
 	<title>EPPLUG - {{show.name}}</title>
 	<meta name="Description" content="{{show.description}}"/>
 	<meta name="Keywords" content="{{show.tags}}"/>
 </head>
 <body class="show">
-  {% include 'hackweeks/header' %}
+  {% include 'header' %}
 
 	<div id="breadcrumb">
 		/ <a href="http://hackweeks.epplug.org/fr-fr">HackWeeks</a> / 
     <a href="{{show.url_for}}">RADIO</a>
 	</div>
+
 	<div id="main">
 		<h3>{{show.name}}</h3>
     {{show.description}}
@@ -33,6 +34,6 @@
     </div>
     {% endfor %}
 	</div>
-  {% include 'hackweeks/footer' %}
+  {% include 'footer' %}
   </body>
 </html>
